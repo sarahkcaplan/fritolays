@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 });
 var locations =[
   {lat: 33.9416, lng: -118.4085, name: 'LAX', picture: 'Los Angeles'},
@@ -50,10 +49,6 @@ function initMap(){
     marker.addListener('click', markerPictureSearch(latLng, map, marker, contentString))
   }
 };
-
-
-
-
 
 
 
