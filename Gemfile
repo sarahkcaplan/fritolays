@@ -12,6 +12,8 @@ gem 'activerecord', '~>5.1.2'
 
 gem 'rake'
 
+gem 'httparty'
+
 gem 'shotgun', '~>0.9.1'
 
 group :test do

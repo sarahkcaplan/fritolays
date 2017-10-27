@@ -17,12 +17,25 @@ function initMap(){
     center: {lat:22.3186, lng:114.1796}
   });
 
-  function markerPicture(map, marker, contentString) {
+  function markerPictureSearch(latLng, map, marker, contentString) {
     return function(){
       var infowindow = new google.maps.InfoWindow({
         content: contentString
       });
       infowindow.open(map, marker);
+      var request = $.ajax({
+        url: '/locations',
+        data: latLng
+      })
+
+      request.done(function(response){
+        $(".stores").a
+      })
+
+      request.fail(function(response){
+        console.log(response);
+        console.log("Well, this is embarrassing :[")
+      })
     };
   }
 
@@ -33,7 +46,15 @@ function initMap(){
       position: latLng,
       map : map
     });
-    marker.addListener('click', markerPicture(map, marker, contentString))
+    marker.addListener('click', markerPictureSearch(latLng, map, marker, contentString))
   }
 };
+
+
+
+
+
+
+
+
 

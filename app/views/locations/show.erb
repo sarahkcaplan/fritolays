@@ -5,3 +5,10 @@
  </script>
 
 <h1>Stores will go here</h1>
+<div id="stores">
+  <ul>
+  <% @store_array.each do |store| %>
+    <li><%= store %></li>
+  <% end  %>
+  </ul>
+</div>
