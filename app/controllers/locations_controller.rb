@@ -6,7 +6,7 @@ get '/locations' do
     @store = JSON.parse(response.read_body)
     @store_array = @store["response"]["groups"][0]["items"]
     @store_array.map! do |store|
-      p store["venue"]["name"]
+       publstore["venue"]["name"]
     end
   end
 end

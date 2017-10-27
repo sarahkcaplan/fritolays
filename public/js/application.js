@@ -28,12 +28,20 @@ function initMap(){
         data: latLng
       })
 
+      var liString = `
+        <% @store_array.each do |store| %>
+          <li><%= store %></li>
+        <% end  %>
+      `
+
       request.done(function(response){
-        $(".stores").a
+        $(".stores").append(liString)
+        console.log(liString);
+        console.log(response);
       })
 
+
       request.fail(function(response){
-        console.log(response);
         console.log("Well, this is embarrassing :[")
       })
     };
