@@ -6,4 +6,14 @@
 
 body {
    padding: 15px;
+   background: #C70039;
  }
+
+li{
+  list-style-type: none
+}
+
+img {
+  height: 600px;
+  width: 400px;
+}

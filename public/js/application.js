@@ -2,13 +2,13 @@ $(document).ready(function() {
 
 });
 var locations =[
-  {lat: 33.9416, lng: -118.4085, name: 'LAX', picture: '../images/laxlays.jpg'},
-  {lat:22.3186, lng:114.1796, name: 'Hong Kong', picture: '../images/hklays.jpg'},
-  {lat: 18.7061, lng: 98.9817, name: 'Chiang Mai', picture: '../images/thailandlays.jpg'},
-  {lat: 19.0760, lng: 72.8777, name: 'Mumbai', picture: '../images/mumbailays.jpg'},
-  {lat: -26.2041, lng: 28.0473, name:'Johannesberg', picture: '../images/laxlays.jpg'},
-  {lat: -34.6037, lng: -58.3816, name: 'Buenos Aires', picture: '../images/argentinalays.jpg'},
-  {lat: 40.7128, lng: -74.0059, name: 'NYC', picture: '../images/newyorklays.jpg'}
+  {lat: 33.9416, lng: -118.4085, name: 'LAX', picture: 'Los Angeles'},
+  {lat:22.3186, lng:114.1796, name: 'Hong Kong', picture: 'Hong Kong'},
+  {lat: 18.7061, lng: 98.9817, name: 'Chiang Mai', picture: 'CHaing Mai'},
+  {lat: 19.0760, lng: 72.8777, name: 'Mumbai', picture: 'Mumbai'},
+  {lat: -26.2041, lng: 28.0473, name:'Johannesberg', picture: 'Johannesberg'},
+  {lat: -34.6037, lng: -58.3816, name: 'Buenos Aires', picture: 'Buenos Aires'},
+  {lat: 40.7128, lng: -74.0059, name: 'NYC', picture: 'New York City'}
 ]
 
 function initMap(){
@@ -28,16 +28,9 @@ function initMap(){
         data: latLng
       })
 
-      var liString = `
-        <% @store_array.each do |store| %>
-          <li><%= store %></li>
-        <% end  %>
-      `
 
       request.done(function(response){
-        $(".stores").append(liString)
-        console.log(liString);
-        console.log(response);
+        $("#test").append(response)
       })
 
 
