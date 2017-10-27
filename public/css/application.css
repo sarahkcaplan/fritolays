@@ -1,4 +1,21 @@
-#map {
-        height: 400px;
-         width: 75%;
-      }
+
+#map{
+  height: 400px;
+  width: 75%;
+  border: 2px solid black;
+}
+
+body {
+   padding: 15px;
+   background: #C70039;
+ }
+
+li{
+  list-style-type: none
+}
+
+img {
+  height: 600px;
+  width: 400px;
+}
+
